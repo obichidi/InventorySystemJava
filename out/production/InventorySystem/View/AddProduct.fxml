@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+
+
+            <children>
+                <AnchorPane layoutX="25.0" layoutY="44.0" prefHeight="250.0" prefWidth="150.0">
+                    <children>
+                        <Label layoutX="12.0" layoutY="18.0" text="ID">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="53.0" text="Name">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="88.0" text="Inv">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="123.0" text="Price">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="158.0" text="Max">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="150.0" layoutY="158.0" text="Min">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="productIdTextField" disable="true" layoutX="50.0" layoutY="13.0" promptText="Auto Gen - Disabled" />
+                        <TextField fx:id="productNameTextField" layoutX="50.0" layoutY="48.0" />
+                        <TextField fx:id="productInvTextField" layoutX="50.0" layoutY="83.0" prefWidth="85.0" />
+                        <TextField fx:id="productPriceTextField" layoutX="50.0" layoutY="118.0" prefWidth="85.0" />
+                        <TextField fx:id="productMaxTextField" layoutX="50.0" layoutY="153.0" prefWidth="85.0" />
+                        <TextField fx:id="productMinTextField" layoutX="188.0" layoutY="153.0" prefWidth="85.0" />
+                    </children>
+                </AnchorPane>
+                <TextField fx:id="productSearchTextField" layoutX="493.0" layoutY="31.0" onAction="#searchPart" onMouseClicked="#resetPart" prefHeight="26.0" prefWidth="173.0" promptText="Search by Part ID or Name">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font>
+                </TextField>
+                <TableView fx:id="addProductTopTableView" layoutX="321.0" layoutY="65.0" prefHeight="135.0" prefWidth="344.0">
+                    <columns>
+                        <TableColumn fx:id="productIdTopColumn" prefWidth="47.0" text="Part ID" />
+                        <TableColumn fx:id="productNameTopColumn" prefWidth="88.0" text="Part Name" />
+                        <TableColumn fx:id="productInventoryTopColumn" prefWidth="94.0" text="Inventory Level" />
+                        <TableColumn fx:id="productPriceTopColumn" prefWidth="114.0" text="Price/Cost per Unit" />
+                    </columns>
+                </TableView>
+                <Button fx:id="productAddButton" layoutX="598.0" layoutY="207.0" mnemonicParsing="false" onAction="#addAssociatedPart" text="Add">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font></Button>
+                <Button fx:id="productRemoveButton" layoutX="514.0" layoutY="384.0" mnemonicParsing="false" onAction="#removeAssociatedPart" text="Remove Associated Part">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font></Button>
+                <Button fx:id="productSaveButton" layoutX="514.0" layoutY="423.0" mnemonicParsing="false" onAction="#save" text="Save">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font></Button>
+                <Button fx:id="productCancelButton" layoutX="608.0" layoutY="423.0" mnemonicParsing="false" onAction="#cancel" text="Cancel">
+                    <font>
+                        <Font name="Arial" size="13.0" />
+                    </font></Button>
+                <Label layoutX="25.0" layoutY="14.0" text="Add Product">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="addProductBottomTableView" layoutX="321.0" layoutY="241.0" prefHeight="135.0" prefWidth="344.0">
+                    <columns>
+                        <TableColumn fx:id="productIdBottomColumn" prefWidth="47.0" text="Part ID" />
+                        <TableColumn fx:id="productNameBottomColumn" prefWidth="88.0" text="Part Name" />
+                        <TableColumn fx:id="productInventoryBottomColumn" prefWidth="94.0" text="Inventory Level" />
+                        <TableColumn fx:id="productPriceBottomColumn" prefWidth="114.0" text="Price/Cost per Unit" />
+                    </columns>
+                </TableView>
+      <Button layoutX="438.0" layoutY="31.0" mnemonicParsing="false" onAction="#searchPart" text="Search" />
+            </children>
+        </AnchorPane>

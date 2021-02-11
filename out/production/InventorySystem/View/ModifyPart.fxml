@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane  id="AnchorPane" prefHeight="800.0" prefWidth="600.0"  xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="76.0" layoutY="66.0" text="Modify Part">
+            <font>
+                <Font name="Arial Bold" size="18.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inHouseRadioButton" layoutX="188.0" layoutY="67.0" mnemonicParsing="false" onAction="#inHouseRadioButtonSelected" text="In-House" />
+        <RadioButton fx:id="outsourcedRadioButton" layoutX="379.0" layoutY="67.0" mnemonicParsing="false" onAction="#outsourcedRadioButtonSelected" text="Outsourced" />
+        <VBox layoutX="76.0" layoutY="129.0" prefHeight="250.0" prefWidth="100.0" spacing="15.0">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="1.0" layoutY="5.0" text="ID">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="40.0" text="Name">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="75.0" text="Inv">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="110.0" text="Price/Cost">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="145.0" text="Max">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="partSwappableLabel" layoutX="1.0" layoutY="180.0" text="Machine ID">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <VBox layoutX="346.0" layoutY="129.0" prefHeight="250.0" prefWidth="100.0">
+            <children>
+                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Label layoutX="30.0" layoutY="145.0" text="Min">
+                            <font>
+                                <Font name="Arial" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+        <TextField fx:id="partIdTextField" disable="true" layoutX="180.0" layoutY="129.0" promptText="Auto Gen - Disabled" />
+        <TextField fx:id="partNameTextField" layoutX="180.0" layoutY="165.0" />
+        <TextField fx:id="partInvTextField" layoutX="180.0" layoutY="198.0" />
+        <TextField fx:id="partPriceTextField" layoutX="180.0" layoutY="233.0" />
+        <TextField fx:id="partMaxTextField" layoutX="180.0" layoutY="268.0" />
+        <TextField fx:id="partSwappableTextField" layoutX="180.0" layoutY="307.0" />
+        <TextField fx:id="partMinTextField" layoutX="417.0" layoutY="268.0" />
+        <Button fx:id="partSaveButton" layoutX="319.0" layoutY="411.0" mnemonicParsing="false" onAction="#saveButtonPushed" text="Save" />
+        <Button fx:id="partCancelButton" layoutX="379.0" layoutY="411.0" mnemonicParsing="false" onAction="#cancelButtonPushed" text="Cancel" />
+    </children>
+</AnchorPane>
